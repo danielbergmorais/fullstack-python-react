@@ -160,7 +160,7 @@ class PessoaAdicionar extends Component {
                                             <DatePicker
                                                 id="data_nascimento"
                                                 className="form-control"
-                                                selected={Date.parse(pessoa.data_nascimento) || Date.now()}
+                                                selected={Date.parse(moment(pessoa.data_nascimento).format('MM-DD-yyyy')) || Date.now()}
                                                 onChange={(date) => { this.setDates('data_nascimento', date) }}
                                                 locale="ptBR"
                                                 dateFormat="dd/MM/yyyy"
@@ -175,7 +175,7 @@ class PessoaAdicionar extends Component {
                                             <DatePicker
                                                 id="data_admissao"
                                                 className="form-control"
-                                                selected={Date.parse(pessoa.data_admissao) || Date.now()}
+                                                selected={Date.parse(moment(pessoa.data_admissao).format('MM-DD-yyyy')) || Date.now()}
                                                 onChange={(date) => { this.setDates('data_admissao', date) }}
                                                 locale="ptBR"
                                                 dateFormat="dd/MM/yyyy"
